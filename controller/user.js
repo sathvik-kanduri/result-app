@@ -6,7 +6,7 @@ const connectDB=require('../config/db.js');
 
 
 const loginUser=async(req,res,next)=>{
-
+    connectDB();
     try{
         const {email,password}=req.body;
         const User=await user.findOne({email})
@@ -49,7 +49,7 @@ const loginUser=async(req,res,next)=>{
 
 const registerUser=async(req,res,next)=>{
 
-
+    connectDB();
     try{
         const {name,email,password}=req.body;
         
@@ -93,7 +93,7 @@ const registerUser=async(req,res,next)=>{
 }
 
 const logoutUser=(req,res,next)=>{
-
+    connectDB();
     try{
             res.cookie("hash","",{
                 httpOnly:false,

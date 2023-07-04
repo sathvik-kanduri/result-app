@@ -8,6 +8,7 @@ const connectDB=require('../config/db.js');
 
 const loginStaff=async(req,res,next)=>{
 
+    connectDB();
     try{
         const {email,password}=req.body;
         const User=await staff.findOne({email})
@@ -50,7 +51,7 @@ const loginStaff=async(req,res,next)=>{
 
 const registerStaff=async(req,res,next)=>{
 
-
+    connectDB();
     try{
         const {name,email,password}=req.body;
         
@@ -93,7 +94,7 @@ const registerStaff=async(req,res,next)=>{
 }
 
 const logoutStaff=(req,res,next)=>{
-
+    connectDB();
     try{
             res.cookie("hash","",{
                 httpOnly:true,
