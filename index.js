@@ -25,7 +25,7 @@ app.use(express.json())
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth',userRoute);
-app.get('/',(req,res)=>{
+app.get('/home',(req,res)=>{
     res.send('welcome to results app');
 })
 
