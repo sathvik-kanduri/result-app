@@ -29,6 +29,9 @@ app.get('/too',(req,res)=>{
     res.send("cookie");
 })
 
+app.get('app',(req,res)=>{
+    res.send("welcome to results app");
+})
 
 
 
