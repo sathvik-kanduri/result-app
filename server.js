@@ -16,7 +16,9 @@ mongoose.connect('mongodb+srv://sathvik:Sathvik%402000@cluster0.ovlrsyr.mongodb.
 })
 
 
-app.use(cors());
+app.use(cors({
+    origin:'https://result-portal.onrender.com'
+}));
 app.use(express.json())
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
@@ -26,7 +28,7 @@ app.get('/too',(req,res)=>{
     res.send("cookie");
 })
 
-app.get('app',(req,res)=>{
+app.get('/app',(req,res)=>{
     res.send("welcome to results app");
 })
 
