@@ -16,9 +16,7 @@ mongoose.connect('mongodb+srv://sathvik:Sathvik%402000@cluster0.ovlrsyr.mongodb.
 })
 
 
-app.use(cors({
-    origin:'https://result-portal.onrender.com'
-}));
+app.use(cors());
 app.use(express.json())
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
