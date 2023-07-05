@@ -15,8 +15,13 @@ mongoose.connect('mongodb+srv://sathvik:Sathvik%402000@cluster0.ovlrsyr.mongodb.
     console.log('the error is',err);
 })
 
+const corsOptions = {
+    origin: 'https://result-portal.onrender.com',
+  }
+  
 
-app.use(cors());
+
+app.use(cors(corsOptions));
 app.use(express.json())
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
