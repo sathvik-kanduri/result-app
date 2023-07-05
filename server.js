@@ -18,7 +18,7 @@ mongoose.connect('mongodb+srv://sathvik:Sathvik%402000@cluster0.ovlrsyr.mongodb.
 
 app.use(cors({
     origin:["http://localhost:3000",
-   " http://result-portal.onrender.com"
+   " https://result-portal.onrender.com"
 ],
     methods:["GET","POST"],
     credentials:true
